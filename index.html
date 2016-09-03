@@ -14,13 +14,14 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <!-- Custom CSS Bootswatch -->
     <link rel="stylesheet" href="https://bootswatch.com/readable/bootstrap.min.css"> 
-   
+
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-2.2.1.min.js" integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00=" crossorigin="anonymous"></script>
-  <!-- Firebase -->
-  <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
-  <!-- Moment.js -->
-  <script src="http://momentjs.com/downloads/moment.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js" integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00=" crossorigin="anonymous"></script>
+    <!-- Firebase -->
+    <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+    <!-- Moment.js -->
+    <script src="http://momentjs.com/downloads/moment.js"></script>
 
 </head>
 <body>
@@ -32,6 +33,7 @@
   <div class="jumbotron">
     <h1 align="center">Train Schedules</h1>
     <h3 class="text-center">Plan Your Next Trip!!</h3>
+    <h4 class="text-left">The current time is:</h4>
     <div id="time"><h3>Current Time</h3></div>
     
   </div>
@@ -40,7 +42,7 @@
   <!-- Train Schedule -->
   <div class="panel panel-primary">
     <div class="panel-heading">
-      <h3 class="panel-title">Detailed Train Schedules</h3>
+      <h3 class="panel-title">Current Train Schedule</h3>
     </div>
     <div class="panel-body">
       <!-- Train Schedule Table -->
@@ -49,19 +51,16 @@
             <tr>
               <th>Train Name</th>                      
               <th>Destination</th>
-              <th>First Train</th>
               <th>Frequency (min)</th>
-              <th>Duration (min)</th>
-              <th>Next Departure</th>
+ <!--             <th>Duration (min)</th> -->
+              <th>Next Arrival</th>
               <th>Minutes Away</th>          
             </tr>
           </thead>
           <tbody>
-          <!-- Train Information Shoots Here -->
+
           </tbody>
         </table> 
-
-      <!-- Train Schedule Table -->
     </div>
   </div>
   
@@ -86,7 +85,7 @@
         </div>
 
         <div class="form-group">
-          <label class="control-label" for="inputDefault">First Train(hh:mm military time)</label>
+          <label class="control-label" for="inputDefault">First Train (hh:mm military time)</label>
           <input type="text" class="form-control" id="firstTrainTimeInput">
         </div>
        
@@ -103,30 +102,26 @@
         <a href="#" class="btn btn-primary" id="submitButton">Submit</a>
 
       <!-- Add Train Form -->
-
     </div>
   </div>
-  <!-- Add Train -->
-
 <!-- Container -->
 
 
 <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+
 <script>
   // Initialize Firebase
   var config = {
-    apiKey: "AIzaSyDziRrasQQw5xJIr9xYMMigV3O5SGaMyXE",
-    authDomain: "new-train-schedule.firebaseapp.com",
-    databaseURL: "https://new-train-schedule.firebaseio.com",
+    apiKey: "AIzaSyBV1Vg5MjLkWGL9iqO1GbXOd5OtoYwGO1g",
+    authDomain: "train-scheduler-7a07d.firebaseapp.com",
+    databaseURL: "https://train-scheduler-7a07d.firebaseio.com",
     storageBucket: "",
   };
   firebase.initializeApp(config);
 </script>
     
-
 <script src="assets/javascript/logic.js"></script>
-
-
+<!-- <script src="assets/javascript/cleardb.js"></script> -->
 
 
 </body>
